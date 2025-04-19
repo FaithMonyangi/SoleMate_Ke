@@ -1,20 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 body{
-    background-color: #907dc4;
+ 
+    background-color:#E6E6FA;
     font-family: Arial, sans-serif;
     margin: 0;
 }
+/*#907dc4  #E6E6FA #B39EB5 */
+h1{
+  font-style: italic;
+}
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #7d57e7;;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.2em;
+  background-color: #7d57e7;
+  font-size: 1.5em;
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+ 
 }
 nav{
     display: flex;
     justify-content: center;
     flex-grow: 1;
-  
 }
 ul{
     display: flex;
@@ -24,7 +39,7 @@ ul{
     gap :2em;
 }
 li{
-    text-decoration: none;
+  text-decoration: none;
 }
 a{
     text-decoration: none;
@@ -38,7 +53,7 @@ a{
 }
 .header-icons i{
     gap:5em;
-    color:#653ed1;
+    color:#551a8b;
     cursor: pointer;
     transition: color 0.3s;
 }
@@ -51,13 +66,15 @@ a{
     top: 100%;
     left: 0;
     z-index: 1000;
+    background-color: #7d57e7;
 }
+/**/
 .dropdown-menu li {
     margin: 0.5em 0;
 }
 
 .dropdown-menu li a {
-    color: #333;
+   color: #551a8b;
     text-decoration: none;
 }
 .dropdown.active .dropdown-menu {
@@ -65,4 +82,155 @@ a{
 }
 .dropdown {
     position: relative;
+}
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('images/1.jpg');
+    background-size: cover;  /* Ensures the whole image is visible */
+    background-position: center center;  /* Centers the image */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: relative;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    max-width: 1000px;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4); /* Dark overlay for readability */
+    z-index: 0;
+  }  
+  .hero-content h2 {
+    padding-top: 12em;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-shop {
+    background-color: #fff;
+    color: #653ed1;
+    padding: 0.75em 1.5em;
+    border-radius: 0.6em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-shop:hover {
+    background-color: #653ed1;
+    color: #fff;
+  }
+  .products{
+    line-height: 2;
+  }
+  .products h2{
+    text-align: center;
+    margin: 1.2em;
+  }
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 2 equal columns */
+    gap: 1.5em; /* Space between products */
+    padding-top: 1.2em;
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-image {
+    border-radius: 0.4em;
+    width: 100%; /* Ensure images fit within their container */
+ 
+    height: 250px; /* Set a consistent height */
+    object-fit: cover; /* Crop the image to fit nicely */
+    max-width: 19.5em; /* Optional: limit image size */
+}
+.product-item h3 {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+}
+.footer-section{
+  display: flex;
+  gap: 10em;
+  margin-top: 1em;
+}
+.footer-subsection{
+  padding-top: 5em;
+  padding-left: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+}.footer-subsection input::placeholder {
+  font-size: 1.5em;
+  color: #aaa; /* Optional */
+}
+footer{
+  margin-top: 2em;
+  background-color: black;
+  color: white;
+}
+.footer-links ul{
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.footer-links li {
+  margin-bottom: 0em; /* Adjust spacing between links */
+}
+
+.footer-links a{
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+.social-icons {
+  padding-top: 1em;
+  display: flex;            /* Display icons in a row */
+  gap: 1.5em;                 /* Add gap between icons */
+}
+.social-icons a{
+  gap: 2em;
+  color: white;
+}
+.payment-icons{
+  display: flex;
+  justify-content: center;
+  gap: 2.2em;
+  margin-top: 1em;
+}
+.copyright{
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  font-size: 0.8em;
+  padding-top: 2em;
+  padding-bottom:1.5em ;
+}
+.fab {
+  transform: scale(1.8); 
 }

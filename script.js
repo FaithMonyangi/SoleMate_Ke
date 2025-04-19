@@ -1,3 +1,4 @@
+console.log("JS loaded ✅");
 function toggleDropdown(event) {
     event.preventDefault();
     const dropdown = event.target.closest('.dropdown');
